@@ -24,14 +24,17 @@ dev_dependencies:
   # Encourages Good Practices
   flutter_lints: ^2.0.0
 
+  # For Changing App Icon
+  # icons_launcher: ^2.1.4
+
 flutter:
 
   # Enables Material Design
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
