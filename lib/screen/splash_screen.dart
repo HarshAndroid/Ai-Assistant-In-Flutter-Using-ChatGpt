@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../helper/global.dart';
+import '../widget/custom_loading.dart';
 import 'home_screen.dart';
+import 'onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     //wait for some time on splash & then move to next screen
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const HomeScreen()));
+          MaterialPageRoute(builder: (_) => const OnboardingScreen()));
     });
   }
 
@@ -29,15 +31,33 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return Scaffold(
       //body
-      body: Center(
-        child: Card(
-          color: Colors.blue,
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Padding(
-            padding: EdgeInsets.all(mq.width * .05),
-            child: Image.asset('assets/images/logo.png', width: mq.width * .4),
-          ),
+      body: SizedBox(
+        width: double.maxFinite,
+        child: Column(
+          children: [
+            //for adding some space
+            const Spacer(flex: 2),
+
+            //logo
+            Card(
+              shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: Padding(
+                padding: EdgeInsets.all(mq.width * .05),
+                child:
+                    Image.asset('assets/images/logo.png', width: mq.width * .4),
+              ),
+            ),
+
+            //for adding some space
+            const Spacer(),
+
+            //lottie loading
+            const CustomLoading(),
+
+            //for adding some space
+            const Spacer(),
+          ],
         ),
       ),
     );
