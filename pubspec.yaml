@@ -20,6 +20,13 @@ dependencies:
   # For using Lottie Animations
   lottie: ^2.7.0
 
+  # For Hive Database
+  hive: ^4.0.0-dev.2
+  isar_flutter_libs: ^4.0.0-dev.13
+
+  # For Accessing Storage Path
+  path_provider: ^2.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

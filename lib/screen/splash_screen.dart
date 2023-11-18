@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../helper/global.dart';
+import '../helper/pref.dart';
 import '../widget/custom_loading.dart';
 import 'home_screen.dart';
 import 'onboarding_screen.dart';
@@ -19,8 +20,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
     //wait for some time on splash & then move to next screen
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const OnboardingScreen()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (_) => Pref.showOnboarding
+              ? const OnboardingScreen()
+              : const HomeScreen()));
     });
   }
 
