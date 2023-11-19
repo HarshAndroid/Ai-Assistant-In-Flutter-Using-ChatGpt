@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
+import 'helper/global.dart';
 import 'helper/pref.dart';
 import 'screen/splash_screen.dart';
 
@@ -22,7 +24,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const GetMaterialApp(
+      title: appName,
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
