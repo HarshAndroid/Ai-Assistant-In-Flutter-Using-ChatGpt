@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 import '../helper/global.dart';
 import '../helper/pref.dart';
@@ -26,6 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     //initializing device size
     mq = MediaQuery.sizeOf(context);
+
+    //sample api call
+    // APIs.getAnswer('hii');
 
     return Scaffold(
       //app bar

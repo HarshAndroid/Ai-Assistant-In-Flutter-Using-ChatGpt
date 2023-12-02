@@ -33,6 +33,10 @@ dependencies:
   # For Custom Animation
   flutter_animate: ^4.2.0+1
 
+  # For API Call
+  http: ^1.1.0
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
