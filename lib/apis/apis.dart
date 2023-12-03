@@ -8,29 +8,35 @@ import '../helper/global.dart';
 
 class APIs {
   //get answer from chat gpt
-  static Future<void> getAnswer(String question) async {
-    //
-    final res =
-        await post(Uri.parse('https://api.openai.com/v1/chat/completions'),
+  static Future<String> getAnswer(String question) async {
+    try {
+      //
+      final res =
+          await post(Uri.parse('https://api.openai.com/v1/chat/completions'),
 
-            //headers
-            headers: {
-              HttpHeaders.contentTypeHeader: 'application/json',
-              HttpHeaders.authorizationHeader: 'Bearer $apiKey'
-            },
+              //headers
+              headers: {
+                HttpHeaders.contentTypeHeader: 'application/json',
+                HttpHeaders.authorizationHeader: 'Bearer $apiKey'
+              },
 
-            //body
-            body: jsonEncode({
-              "model": "gpt-3.5-turbo",
-              "max_tokens": 2000,
-              "temperature": 0,
-              "messages": [
-                {"role": "user", "content": question},
-              ]
-            }));
+              //body
+              body: jsonEncode({
+                "model": "gpt-3.5-turbo",
+                "max_tokens": 2000,
+                "temperature": 0,
+                "messages": [
+                  {"role": "user", "content": question},
+                ]
+              }));
 
-    final data = jsonDecode(res.body);
+      final data = jsonDecode(res.body);
 
-    log('res: ${data['choices'][0]['message']['content']}');
+      log('res: $data');
+      return data['choices'][0]['message']['content'];
+    } catch (e) {
+      log('getAnswerE: $e');
+      return 'Something went wrong (Try again in sometime)';
+    }
   }
 }

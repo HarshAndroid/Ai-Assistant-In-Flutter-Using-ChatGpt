@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../controller/chat_controller.dart';
+import '../../helper/global.dart';
+import '../../widget/message_card.dart';
 
 class ChatBotFeature extends StatefulWidget {
   const ChatBotFeature({super.key});
@@ -8,6 +13,8 @@ class ChatBotFeature extends StatefulWidget {
 }
 
 class _ChatBotFeatureState extends State<ChatBotFeature> {
+  final _c = ChatController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,17 +23,20 @@ class _ChatBotFeatureState extends State<ChatBotFeature> {
         title: const Text('Chat with AI Assistant'),
       ),
 
+      //send message field & btn
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Row(children: [
-
           //text input field
           Expanded(
               child: TextFormField(
+            controller: _c.textC,
             textAlign: TextAlign.center,
             onTapOutside: (e) => FocusScope.of(context).unfocus(),
             decoration: const InputDecoration(
+                fillColor: Colors.white,
+                filled: true,
                 isDense: true,
                 hintText: 'Ask me anything you want...',
                 hintStyle: TextStyle(fontSize: 14),
@@ -41,8 +51,8 @@ class _ChatBotFeatureState extends State<ChatBotFeature> {
           CircleAvatar(
             radius: 24,
             child: IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.rocket_launch_rounded,
+              onPressed: _c.askQuestion,
+              icon: const Icon(Icons.rocket_launch_rounded,
                   color: Colors.white, size: 28),
             ),
           )
@@ -50,8 +60,14 @@ class _ChatBotFeatureState extends State<ChatBotFeature> {
       ),
 
       //body
-      body: ListView(
-        children: const [],
+      body: Obx(
+        () => ListView(
+          physics: const BouncingScrollPhysics(),
+          controller: _c.scrollC,
+          padding:
+              EdgeInsets.only(top: mq.height * .02, bottom: mq.height * .1),
+          children: _c.list.map((e) => MessageCard(message: e)).toList(),
+        ),
       ),
     );
   }
