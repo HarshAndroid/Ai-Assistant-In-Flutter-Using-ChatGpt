@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 
 import '../helper/global.dart';
 import '../model/onboard.dart';
+import '../widget/custom_btn.dart';
 import 'home_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -87,14 +88,8 @@ class OnboardingScreen extends StatelessWidget {
               const Spacer(),
 
               //button
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      shape: const StadiumBorder(),
-                      elevation: 0,
-                      textStyle: const TextStyle(
-                          fontSize: 16, fontWeight: FontWeight.w500),
-                      minimumSize: Size(mq.width * .4, 50)),
-                  onPressed: () {
+              CustomBtn(
+                  onTap: () {
                     if (isLast) {
                       Get.off(() => const HomeScreen());
                       // Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -105,7 +100,7 @@ class OnboardingScreen extends StatelessWidget {
                           curve: Curves.ease);
                     }
                   },
-                  child: Text(isLast ? 'Finish' : 'Next')),
+                  text: isLast ? 'Finish' : 'Next'),
 
               const Spacer(flex: 2),
             ],

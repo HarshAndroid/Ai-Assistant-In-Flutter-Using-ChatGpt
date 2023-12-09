@@ -34,9 +34,12 @@ dependencies:
   flutter_animate: ^4.2.0+1
   animated_text_kit: ^4.2.2
 
-
   # For API Call
   http: ^1.1.0
+
+  # For AI Image Generation
+  dart_openai: ^5.0.0
+  cached_network_image: ^3.3.0
 
 
 dev_dependencies:
