@@ -28,14 +28,15 @@ class MyApp extends StatelessWidget {
       title: appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+          useMaterial3: false,
           appBarTheme: const AppBarTheme(
-        elevation: 1,
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.blue),
-        titleTextStyle: TextStyle(
-            color: Colors.blue, fontSize: 20, fontWeight: FontWeight.w500),
-      )),
+            elevation: 1,
+            centerTitle: true,
+            backgroundColor: Colors.white,
+            iconTheme: IconThemeData(color: Colors.blue),
+            titleTextStyle: TextStyle(
+                color: Colors.blue, fontSize: 20, fontWeight: FontWeight.w500),
+          )),
       home: const SplashScreen(),
     );
   }
