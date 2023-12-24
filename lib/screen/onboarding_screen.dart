@@ -1,3 +1,4 @@
+import 'package:ai_assistant/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:lottie/lottie.dart';
@@ -62,8 +63,10 @@ class OnboardingScreen extends StatelessWidget {
                 child: Text(
                   list[ind].subtitle,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                      fontSize: 13.5, letterSpacing: .5, color: Colors.black54),
+                  style: TextStyle(
+                      fontSize: 13.5,
+                      letterSpacing: .5,
+                      color: Theme.of(context).lightTextColor),
                 ),
               ),
 

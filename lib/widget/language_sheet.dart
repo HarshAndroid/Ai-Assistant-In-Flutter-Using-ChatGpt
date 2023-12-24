@@ -25,9 +25,9 @@ class _LanguageSheetState extends State<LanguageSheet> {
       height: mq.height * .5,
       padding: EdgeInsets.only(
           left: mq.width * .04, right: mq.width * .04, top: mq.height * .02),
-      decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+          color: Theme.of(context).scaffoldBackgroundColor,
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(15), topRight: Radius.circular(15))),
       child: Column(
         children: [
