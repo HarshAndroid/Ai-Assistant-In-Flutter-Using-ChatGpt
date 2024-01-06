@@ -14,6 +14,11 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # App Write Database (For dynamically getting API Key)  
+  # appwrite: ^11.0.1s
+  appwrite: 
+    path: ./appwrite
+
   # iOS Styled Icons
   cupertino_icons: ^1.0.2
 
