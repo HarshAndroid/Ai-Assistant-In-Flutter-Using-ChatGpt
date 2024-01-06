@@ -78,11 +78,41 @@ class _ImageFeatureState extends State<ImageFeature> {
           //ai image
           Container(
               height: mq.height * .5,
+              margin: EdgeInsets.symmetric(vertical: mq.height * .015),
               alignment: Alignment.center,
               child: Obx(() => _aiImage())),
 
+          Obx(() => _c.imageList.isEmpty
+              ? const SizedBox()
+              : SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.only(bottom: mq.height * .03),
+                  physics: const BouncingScrollPhysics(),
+                  child: Wrap(
+                    spacing: 10,
+                    children: _c.imageList
+                        .map((e) => InkWell(
+                              onTap: () {
+                                _c.url.value = e;
+                              },
+                              child: ClipRRect(
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(8)),
+                                child: CachedNetworkImage(
+                                  imageUrl: e,
+                                  height: 100,
+                                  errorWidget: (context, url, error) =>
+                                      const SizedBox(),
+                                ),
+                              ),
+                            ))
+                        .toList(),
+                  ),
+                )),
+
           //create btn
-          CustomBtn(onTap: _c.createAIImage, text: 'Create'),
+          // CustomBtn(onTap: _c.createAIImage, text: 'Create'),
+          CustomBtn(onTap: _c.searchAiImage, text: 'Create'),
         ],
       ),
     );
@@ -94,7 +124,7 @@ class _ImageFeatureState extends State<ImageFeature> {
           Status.none =>
             Lottie.asset('assets/lottie/ai_play.json', height: mq.height * .3),
           Status.complete => CachedNetworkImage(
-              imageUrl: _c.url,
+              imageUrl: _c.url.value,
               placeholder: (context, url) => const CustomLoading(),
               errorWidget: (context, url, error) => const SizedBox(),
             ),

@@ -9,6 +9,7 @@ import 'package:http/http.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../apis/apis.dart';
 import '../helper/global.dart';
 import '../helper/my_dialog.dart';
 
@@ -19,7 +20,9 @@ class ImageController extends GetxController {
 
   final status = Status.none.obs;
 
-  String url = '';
+  final url = ''.obs;
+
+  final imageList = <String>[].obs;
 
   Future<void> createAIImage() async {
     if (textC.text.trim().isNotEmpty) {
@@ -32,7 +35,7 @@ class ImageController extends GetxController {
         size: OpenAIImageSize.size512,
         responseFormat: OpenAIImageResponseFormat.url,
       );
-      url = image.data[0].url.toString();
+      url.value = image.data[0].url.toString();
 
       status.value = Status.complete;
     } else {
@@ -47,7 +50,7 @@ class ImageController extends GetxController {
 
       log('url: $url');
 
-      final bytes = (await get(Uri.parse(url))).bodyBytes;
+      final bytes = (await get(Uri.parse(url.value))).bodyBytes;
       final dir = await getTemporaryDirectory();
       final file = await File('${dir.path}/ai_image.png').writeAsBytes(bytes);
 
@@ -75,7 +78,7 @@ class ImageController extends GetxController {
 
       log('url: $url');
 
-      final bytes = (await get(Uri.parse(url))).bodyBytes;
+      final bytes = (await get(Uri.parse(url.value))).bodyBytes;
       final dir = await getTemporaryDirectory();
       final file = await File('${dir.path}/ai_image.png').writeAsBytes(bytes);
 
@@ -92,6 +95,27 @@ class ImageController extends GetxController {
       Get.back();
       MyDialog.error('Something Went Wrong (Try again in sometime)!');
       log('downloadImageE: $e');
+    }
+  }
+
+  Future<void> searchAiImage() async {
+    //if prompt is not empty
+    if (textC.text.trim().isNotEmpty) {
+      status.value = Status.loading;
+
+      imageList.value = await APIs.searchAiImages(textC.text);
+
+      if (imageList.isEmpty) {
+        MyDialog.error('Something went wrong (Try again in sometime)');
+
+        return;
+      }
+
+      url.value = imageList.first;
+
+      status.value = Status.complete;
+    } else {
+      MyDialog.info('Provide some beautiful image description!');
     }
   }
 }
