@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/get_core.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 import '../../controller/image_controller.dart';
 import '../../controller/translate_controller.dart';
@@ -104,7 +102,8 @@ class _TranslatorFeatureState extends State<TranslatorFeature> {
 
           //translate btn
           CustomBtn(
-            onTap: _c.translate,
+            onTap: _c.googleTranslate,
+            // onTap: _c.translate,
             text: 'Translate',
           )
         ],

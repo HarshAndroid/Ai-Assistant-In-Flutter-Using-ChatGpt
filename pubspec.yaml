@@ -46,6 +46,9 @@ dependencies:
   dart_openai: ^5.0.0
   cached_network_image: ^3.3.0
 
+  # For Google Language Translate
+  translator_plus: ^1.0.1
+
   # For Saving Image to Gallery
   gallery_saver_updated: ^3.0.0
 
