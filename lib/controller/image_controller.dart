@@ -52,6 +52,7 @@ class ImageController extends GetxController {
 
       final bytes = (await get(Uri.parse(url.value))).bodyBytes;
       final dir = await getTemporaryDirectory();
+
       final file = await File('${dir.path}/ai_image.png').writeAsBytes(bytes);
 
       log('filePath: ${file.path}');
