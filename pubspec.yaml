@@ -26,8 +26,12 @@ dependencies:
   lottie: ^2.7.0
 
   # For Hive Database
-  hive: ^4.0.0-dev.2
-  isar_flutter_libs: ^4.0.0-dev.13
+  # hive: ^4.0.0-dev.2
+  # isar_flutter_libs: ^4.0.0-dev.13
+
+  # Using this version due to less apk size
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
 
   # For Accessing Storage Path
   path_provider: ^2.1.1
@@ -54,6 +58,9 @@ dependencies:
 
   # For Sharing Image
   share_plus: ^7.2.1
+
+  # Facebook Ads
+  easy_audience_network: ^0.0.6
 
 dev_dependencies:
   flutter_test:

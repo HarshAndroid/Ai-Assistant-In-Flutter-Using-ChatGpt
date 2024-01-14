@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import '../helper/ad_helper.dart';
 import '../helper/global.dart';
 import '../helper/pref.dart';
 import '../model/home_type.dart';
@@ -55,6 +56,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   size: 26)))
         ],
       ),
+
+      //ad
+      bottomNavigationBar: AdHelper.nativeBannerAd(),
 
       //body
       body: ListView(

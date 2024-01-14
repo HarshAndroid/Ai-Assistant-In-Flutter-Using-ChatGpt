@@ -1,16 +1,18 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:hive_flutter/adapters.dart';
 
 class Pref {
   static late Box _box;
 
   static Future<void> initialize() async {
     //for initializing hive to use app directory
-    Hive.defaultDirectory = (await getApplicationDocumentsDirectory()).path;
-    _box = Hive.box(name: 'myData');
+    // Hive.defaultDirectory = (await getApplicationDocumentsDirectory()).path;
+    // _box = Hive.box(name: 'myData');
+
+    await Hive.initFlutter();
+    _box = await Hive.openBox('myData');
   }
 
   static bool get showOnboarding =>

@@ -6,6 +6,8 @@
     <!-- For Stroage Access -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <!-- Ads Permission for Android 13 or higher -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 
     <application
         android:label="Ai Assistant"
