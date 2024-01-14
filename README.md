@@ -3,14 +3,12 @@
 ![Dart](https://img.shields.io/badge/dart-100%25-brightgreen)
 ![Flutter](https://img.shields.io/badge/Flutter-Cross%20Platform-blue)
 
-##Note: Project is Still in Development Phase (For more Details, check out below Youtube Course).
-
 <b>AI Chatbot, Image Generator & Language Translator App | OpenAI ChatGPT | AI Assistant | Dart 3 & Flutter 3.13 🚀 with Free OpenAI Trial </b></br>
 
 <b>Final Apk:</b><br>
-https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_v1.0.1_1_04_11_2023.apk (Global Apk)
+https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_14_01_2023_global.apk (Global Apk ~ 50 mb - Supports all devices)
 
-https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_v1.0.1_1_04_11_2023-arm-v7.apk (Arm-v7)
+https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_14_01_2023_armv7.apk (Arm-v7 ~ 20 mb - Supports latest devices)
 
 <b>Note:</b> Some Features of Above Apk may not work as expected due to Api Key Expiry (Because it uses Free Trial of OpenAI Api).
 
@@ -35,8 +33,9 @@ https://youtube.com/playlist?list=PL8kbUJtS6hyYWBLel9ZbzsmazQ4H8zWYG&si=fjsGc7SK
  <b>Features👇 : </b>
 <ul>
 <li>Ai Chatbot
-<li>Ai Image Creator/Generator
-<li>Ai Multi Language Translator
+<li>Facebook Ads Integration (For Sample)
+<li>Ai Image Creator/Generator (with GPT + Lexica Image Search)
+<li>Ai Multi Language Translator (with GPT + Google Translator)
 <li>Uses ChatGpt (Open AI API)
 <li>Custom Light/Dark Mode
 <li>First Time Onboarding or Introducton Screens
