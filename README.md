@@ -6,9 +6,9 @@
 <b>AI Chatbot, Image Generator & Language Translator App | OpenAI ChatGPT | AI Assistant | Dart 3 & Flutter 3.13 🚀 with Free OpenAI Trial </b></br>
 
 <b>Final Apk:</b><br>
-https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_14_01_2023_global.apk (Global Apk ~ 50 mb - Supports all devices)
+https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_12_07_2024_global.apk (Global Apk ~ 50 mb - Supports all devices)
 
-https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_14_01_2023_armv7.apk (Arm-v7 ~ 20 mb - Supports latest devices)
+https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_12_07_2024_armv7.apk (Arm-v7 ~ 20 mb - Supports latest devices)
 
 <b>Note:</b> Some Features of Above Apk may not work as expected due to Api Key Expiry (Because it uses Free Trial of OpenAI Api).
 
