@@ -1,4 +1,4 @@
-import 'package:ai_assistant/main.dart';
+import '../main.dart';
 import 'package:flutter/material.dart';
 
 import '../helper/global.dart';

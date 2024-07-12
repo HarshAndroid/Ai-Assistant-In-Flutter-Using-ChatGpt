@@ -4,10 +4,10 @@ description: An AI Assistant (ChatBot, Image Generator & Language Translator) Ap
 publish_to: 'none' 
 
 # App Version
-version: 1.0.0+1
+version: 1.0.2+2
 
 environment:
-  sdk: '>=3.1.3 <4.0.0'
+  sdk: '>=3.4.3 <4.0.0'
 
 # Dependencies
 dependencies:
@@ -15,15 +15,15 @@ dependencies:
     sdk: flutter
 
   # App Write Database (For dynamically getting API Key)  
-  # appwrite: ^11.0.1s
-  appwrite: 
-    path: ./appwrite
+  appwrite: ^12.0.4
+  # appwrite: 
+  #   path: ./appwrite
 
   # iOS Styled Icons
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.8
 
   # For using Lottie Animations
-  lottie: ^2.7.0
+  lottie: ^3.1.2
 
   # For Hive Database
   # hive: ^4.0.0-dev.2
@@ -34,21 +34,21 @@ dependencies:
   hive_flutter: ^1.1.0
 
   # For Accessing Storage Path
-  path_provider: ^2.1.1
+  path_provider: ^2.1.3
 
   # For State Management
   get: ^4.6.6
 
   # For Custom Animation
-  flutter_animate: ^4.2.0+1
+  flutter_animate: ^4.5.0
   animated_text_kit: ^4.2.2
 
   # For API Call
-  http: ^1.1.2
+  http: ^1.2.1
 
   # For AI Image Generation
-  dart_openai: ^5.0.0
-  cached_network_image: ^3.3.0
+  dart_openai: ^5.1.0
+  cached_network_image: ^3.3.1
 
   # For Google Language Translate
   translator_plus: ^1.0.1
@@ -57,7 +57,7 @@ dependencies:
   gallery_saver_updated: ^3.0.0
 
   # For Sharing Image
-  share_plus: ^7.2.1
+  share_plus: ^9.0.0
 
   # Facebook Ads
   easy_audience_network: ^0.0.6
@@ -67,10 +67,10 @@ dev_dependencies:
     sdk: flutter
 
   # Encourages Good Practices
-  flutter_lints: ^2.0.0
+  flutter_lints: ^4.0.0
 
   # For Changing App Icon
-  # icons_launcher: ^2.1.4
+  # icons_launcher: ^2.1.7
 
 flutter:
 

@@ -16,7 +16,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final _isDarkMode = Pref.isDarkMode.obs;
+  // final _isDarkMode = Pref.isDarkMode.obs;
+  final _isDarkMode = Get.isDarkMode.obs; //bug fix
 
   @override
   void initState() {
