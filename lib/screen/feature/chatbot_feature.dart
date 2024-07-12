@@ -1,4 +1,4 @@
-import 'package:ai_assistant/main.dart';
+import '../../main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -40,8 +40,8 @@ class _ChatBotFeatureState extends State<ChatBotFeature> {
                 filled: true,
                 isDense: true,
                 hintText: 'Ask me anything you want...',
-                hintStyle: TextStyle(fontSize: 14),
-                border: OutlineInputBorder(
+                hintStyle: const TextStyle(fontSize: 14),
+                border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(50)))),
           )),
 
