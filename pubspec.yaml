@@ -44,11 +44,14 @@ dependencies:
   animated_text_kit: ^4.2.2
 
   # For API Call
-  http: ^1.2.1
+  http: ^1.2.2
 
   # For AI Image Generation
   dart_openai: ^5.1.0
   cached_network_image: ^3.3.1
+  
+  # Google Gemini Ai Integration
+  google_generative_ai: ^0.4.3
 
   # For Google Language Translate
   translator_plus: ^1.0.1
