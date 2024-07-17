@@ -36,7 +36,7 @@ https://youtube.com/playlist?list=PL8kbUJtS6hyYWBLel9ZbzsmazQ4H8zWYG&si=fjsGc7SK
 <li>Facebook Ads Integration (For Sample)
 <li>Ai Image Creator/Generator (with GPT + Lexica Image Search)
 <li>Ai Multi Language Translator (with GPT + Google Translator)
-<li>Uses ChatGpt (Open AI API)
+<li>Uses ChatGpt (Open AI API) + Google Gemini AI
 <li>Custom Light/Dark Mode
 <li>First Time Onboarding or Introducton Screens
 <li>Animations (Text Animation, Lottie, Fading, etc)
