@@ -3,7 +3,7 @@
 ![Dart](https://img.shields.io/badge/dart-100%25-brightgreen)
 ![Flutter](https://img.shields.io/badge/Flutter-Cross%20Platform-blue)
 
-<b>AI Chatbot, Image Generator & Language Translator App | OpenAI ChatGPT | AI Assistant | Dart 3 & Flutter 3.13 🚀 with Free OpenAI Trial </b></br>
+<b>AI Chatbot, Image Generator & Language Translator App | OpenAI ChatGPT | Google Gemini AI | AI Assistant | Dart 3 & Flutter 3.13 🚀 with Free OpenAI Trial </b></br>
 
 <b>Final Apk:</b><br>
 https://github.com/HarshAndroid/ai_assistant/blob/master/sample%20apk/ai_assistant_12_07_2024_global.apk (Global Apk ~ 50 mb - Supports all devices)
@@ -32,7 +32,7 @@ https://youtube.com/playlist?list=PL8kbUJtS6hyYWBLel9ZbzsmazQ4H8zWYG&si=fjsGc7SK
   
  <b>Features👇 : </b>
 <ul>
-<li>Ai Chatbot
+<li>Ai Chatbot (with GPT + Google Gemini Ai)
 <li>Facebook Ads Integration (For Sample)
 <li>Ai Image Creator/Generator (with GPT + Lexica Image Search)
 <li>Ai Multi Language Translator (with GPT + Google Translator)
